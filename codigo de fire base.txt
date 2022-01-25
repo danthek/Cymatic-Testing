@@ -1,0 +1,21 @@
+// Import the functions you need from the SDKs you need
+import { initializeApp } from "firebase/app";
+// TODO: Add SDKs for Firebase products that you want to use
+// https://firebase.google.com/docs/web/setup#available-libraries
+
+// Your web app's Firebase configuration
+const firebaseConfig = {
+  apiKey: "AIzaSyCUd8o64_aGrbcVKIEzuMPdSBUqZ8Su0Yo",
+  authDomain: "cymatic-testing-fa5a2.firebaseapp.com",
+  projectId: "cymatic-testing-fa5a2",
+  storageBucket: "cymatic-testing-fa5a2.appspot.com",
+  messagingSenderId: "741260284592",
+  appId: "1:741260284592:web:72f14eef38b945a256e175"
+};
+
+// Initialize Firebase
+const app = initializeApp(firebaseConfig);
+
+
+
+npm install firebase
