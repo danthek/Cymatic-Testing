@@ -5,7 +5,7 @@ import { Signup } from './Signup';
 import { LogedOut } from './LogedOut';
 import { Container } from 'react-bootstrap';
 import { AuthProvider } from '../contexts/AuthContext';
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Routes, Navigate} from 'react-router-dom';
 
 function App() {
   return (
@@ -17,6 +17,7 @@ function App() {
         <Router>
           <AuthProvider>
             <Routes>
+              <Route path="/" element={<Navigate replace to="/login" />} />
               <Route path='/board' element={<Board />} />
               <Route path='/success' element={<Success />} />
               <Route path='/login' element={<Login />} />
