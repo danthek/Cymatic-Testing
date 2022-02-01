@@ -21,10 +21,10 @@ export const Login = () => {
       await login(emailRef.current.value, passwordRef.current.value);
       document.cookie = 'sid=true';
       navigate('/success');
-      res.cookie('cymatic-cookie', 'cookie-value', {
+    /*   res.cookie('cymatic-cookie', 'cookie-value', {
         expires: new Date(Date.now() + 900000),
         httpOnly: false,
-      });
+      }); */
     } catch {
       setError('Failed to Log in');
     }

@@ -3,7 +3,7 @@ import { Button, Card, Container } from 'react-bootstrap';
 import { useAuth } from '../contexts/AuthContext';
 import { Link, useNavigate } from 'react-router-dom';
 
-let res;
+
 
 export const Board = () => {
   const { logout, currentUser } = useAuth();
@@ -16,10 +16,9 @@ export const Board = () => {
   function handleLogOut() {
     return (
       logout(),
-      (document.cookie = 'sid=;expires=Thu, 01 Jan 1970 00:00:01 GMT;'),
-      navigate('/logedout'),
-      res.cookie('cymatic-cookie', { expires: Date.now() }),
-      res.clearCookie('cymatic-cookie')
+
+      navigate('/logedout')
+    
     );
   }
 
