@@ -4,12 +4,12 @@ import firebase from 'firebase/compat/app';
 import 'firebase/compat/auth';
 
 const app = firebase.initializeApp({
-  apiKey: process.env.REACT_APP_FIREBASE_API_KEY,
-  authDomain: process.env.REACT_APP_FIREBASE_AUTH_DOMAIN,
-  projectId: process.env.REACT_APP_FIREBASE_PROJECT_ID,
-  storageBucket: process.env.REACT_APP_FIREBASE_STORAGE_BUCKE,
-  messagingSenderId: process.env.REACT_APP_FIREBASE_MESSAGING_SENDER_ID,
-  appId: process.env.REACT_APP_FIREBASE_APP_ID,
+  apiKey: 'AIzaSyCUd8o64_aGrbcVKIEzuMPdSBUqZ8Su0Yo',
+  authDomain: 'cymatic-testing-fa5a2.firebaseapp.com',
+  projectId: 'cymatic-testing-fa5a2',
+  storageBucket: 'cymatic-testing-fa5a2.appspot.com',
+  messagingSenderId: '741260284592',
+  appId: '1:741260284592:web:72f14eef38b945a256e175',
 });
 
 export const auth = app.auth();

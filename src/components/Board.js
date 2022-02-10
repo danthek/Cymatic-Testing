@@ -3,8 +3,6 @@ import { Button, Card, Container } from 'react-bootstrap';
 import { useAuth } from '../contexts/AuthContext';
 import { Link, useNavigate } from 'react-router-dom';
 
-
-
 export const Board = () => {
   const { logout, currentUser } = useAuth();
   const navigate = useNavigate();
@@ -14,12 +12,7 @@ export const Board = () => {
   }
 
   function handleLogOut() {
-    return (
-      logout(),
-
-      navigate('/logedout')
-    
-    );
+    return logout(), navigate('/logedout');
   }
 
   /*   function handleLogOut() {

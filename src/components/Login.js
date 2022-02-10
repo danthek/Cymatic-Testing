@@ -1,9 +1,7 @@
-import React, { useRef, useState } from 'react';
+import React, { useRef, useState, useEffect } from 'react';
 import { Form, Button, Card, Alert } from 'react-bootstrap';
 import { useAuth } from '../contexts/AuthContext';
 import { Link, useNavigate } from 'react-router-dom';
-
-let res;
 
 export const Login = () => {
   const emailRef = useRef();
@@ -21,7 +19,7 @@ export const Login = () => {
       await login(emailRef.current.value, passwordRef.current.value);
       document.cookie = 'sid=true';
       navigate('/success');
-    /*   res.cookie('cymatic-cookie', 'cookie-value', {
+      /*   let res; res.cookie('cymatic-cookie', 'cookie-value', {
         expires: new Date(Date.now() + 900000),
         httpOnly: false,
       }); */
