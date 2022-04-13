@@ -38,7 +38,7 @@ export const Login = () => {
           {currentUser && currentUser.email}
           {error && <Alert variant='danger'>{error}</Alert>}
           <Form onSubmit={handleSubmit}>
-            <Form.Group id='email' className='mb-4'>
+            <Form.Group id='form' className='mb-4'>
               <Form.Label>Email</Form.Label>
               <Form.Control type='email' ref={emailRef} required />
               <Form.Label>Password</Form.Label>

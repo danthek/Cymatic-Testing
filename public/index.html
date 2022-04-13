@@ -1,18 +1,58 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-<!-- Snippet for dev -->
-<!-- Snippet for https://cymatic-testing-fa5a2.web.app -->
-<script src="https://sdk.dev.cymatic.info/00df0dc2-e5a7-4d4b-b657-4bdc01f145ab/ce99f8a1-7ae5-4a48-b3ab-4097032674c8/sdk"></script>
-<script>CymaticXid.v2.init({ login: { dynamic:true, selector:'#root > div > div > div > div.card > div > form', username:'#email > input:nth-child(2)', password:'#email > input:nth-child(4)', submit:'#root > div > div > div > div.card > div > form > button' }});</script>
-<!-- Snippet for Prod -->
-<!-- <script src="https://sdk.cymatic.io/4a71ba5e-c6fa-4b59-97a0-de59555f3ece/0edb7f0e-3bd8-43ea-beab-03122b9093c2/sdk"></script>
-<script>CymaticXid.v2.init({ login: { selector:'#root > div > div > div > div.card > div > form', username:'#email > input:nth-child(2)', password:'#email > input:nth-child(4)', submit:'#root > div > div > div > div.card > div > form > button' }});</script>
- -->    <meta charset="utf-8" />
-    <link rel="icon" type="image/png" sizes="16x16"  href="%PUBLIC_URL%/favicon-16x16.png">
-<meta name="msapplication-TileColor" content="#ffffff">
-<meta name="theme-color" content="#ffffff">
-<!--     <link rel="icon" href="%PUBLIC_URL%/favicon.ico" /> -->
+    <!-- Snippet for WAYNE DEV -->
+  <!--   <script src="https://sdk.dev.cymatic.info/00df0dc2-e5a7-4d4b-b657-4bdc01f145ab/e943d000-4c7a-4d26-9299-6ef37643fbb0/sdk"></script>
+    <script>
+      CymaticXid.v2.init({
+        login: {
+          dynamic: !0,
+          selector: ".card-body > form:nth-child(2)",
+          username: "input.form-control:nth-child(2)",
+          password: "input.form-control:nth-child(4)",
+          submit: "button.w-100",
+        },
+      });
+    </script> -->
+
+    <!-- Snippet for STARK DEV -->
+<!--        <script src="https://sdk.dev.cymatic.info/59da90cb-6f08-46fc-9ccf-dcd3edc8c8ed/a12f4c58-172e-4c23-999b-3ee967babd65/sdk"></script>
+    <script>
+      CymaticXid.v2.init({
+        login: {
+          dynamic: !0,
+          selector: "#root > div > div > div > div.card > div > form",
+          username: "#form > input:nth-child(2)",
+          password: "#form > input:nth-child(4)",
+          submit: "#root > div > div > div > div.card > div > form > button",
+        },
+      });
+    </script>
+ -->
+    <!-- Snippet for KENT PROD -->
+        <script src="https://sdk.cymatic.io/3f22202c-cfb7-48ce-b551-c53068b6a0ae/7a4ae0df-0c72-40a3-b31a-f46ac47cace6/sdk"></script>
+    <script>
+      CymaticXid.v2.init({
+        login: {
+          dynamic: !0,
+          selector: "#root > div > div > div > div.card > div > form",
+          username: "#form > input:nth-child(2)",
+          password: "#form > input:nth-child(4)",
+          submit: "#root > div > div > div > div.card > div > form > button",
+        },
+      });
+    </script>
+
+    <meta charset="utf-8" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="%PUBLIC_URL%/favicon-16x16.png"
+    />
+    <meta name="msapplication-TileColor" content="#ffffff" />
+    <meta name="theme-color" content="#ffffff" />
+    <!--     <link rel="icon" href="%PUBLIC_URL%/favicon.ico" /> -->
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="theme-color" content="#000000" />
     <meta
@@ -37,6 +77,7 @@
     <title>Cymatic Login testing</title>
   </head>
   <body>
+  
     <noscript>You need to enable JavaScript to run this app.</noscript>
     <div id="root"></div>
     <!--
