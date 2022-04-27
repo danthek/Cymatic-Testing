@@ -1,7 +1,6 @@
-import React, { useState, useEffect } from 'react';
-import { Button, Card, Alert } from 'react-bootstrap';
-import { useAuth } from '../contexts/AuthContext';
-import { Link, useNavigate } from 'react-router-dom';
+import React, { useEffect } from 'react';
+import { Button, Card } from 'react-bootstrap';
+import { useNavigate } from 'react-router-dom';
 
 export const LogedOut = () => {
   const navigate = useNavigate();

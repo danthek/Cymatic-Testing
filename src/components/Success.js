@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-import { Button, Card, Alert } from 'react-bootstrap';
+import React from 'react';
+import { Button, Card} from 'react-bootstrap';
 import { useAuth } from '../contexts/AuthContext';
 import { Link, useNavigate } from 'react-router-dom';
 
@@ -7,8 +7,7 @@ import { Link, useNavigate } from 'react-router-dom';
 
 export const Success = () => {
   // document.cookie = 'sid=true';
-  const { logout, currentUser } = useAuth();
-  const [error, setError] = useState();
+  const { logout } = useAuth();
   const navigate = useNavigate();
 
   function handleLogOut() {
