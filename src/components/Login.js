@@ -1,4 +1,4 @@
-import React, { useRef, useState} from 'react';
+import React, { useRef, useState, useEffect} from 'react';
 import { Form, Button, Card, Alert } from 'react-bootstrap';
 import { useAuth } from '../contexts/AuthContext';
 import { Link, useNavigate } from 'react-router-dom';
@@ -10,6 +10,8 @@ export const Login = () => {
   const navigate = useNavigate();
   const [error, setError] = useState();
   const [loading, setLoading] = useState(false);
+  const mountedRef = useRef(true);
+
 
   async function handleSubmit(e) {
     e.preventDefault();
@@ -29,6 +31,11 @@ export const Login = () => {
     setLoading('false');
   }
 
+  useEffect(() => {
+    return () => {
+      mountedRef.current = false;
+    };
+  }, []);
   return (
     <>
       <Card>
