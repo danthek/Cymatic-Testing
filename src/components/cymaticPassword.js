@@ -1,5 +1,5 @@
-import React, { Component, useEffect } from 'react';
-import { Form, Button, Card, Alert, ListGroup } from 'react-bootstrap';
+import React, { Component } from 'react';
+import { Form} from 'react-bootstrap';
 
 const cymatic = {
   engine: window.CymaticXid,
