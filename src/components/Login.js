@@ -1,7 +1,8 @@
-import React, { useRef, useState, useEffect} from 'react';
+import React, { useRef, useState, useEffect } from 'react';
 import { Form, Button, Card, Alert } from 'react-bootstrap';
 import { useAuth } from '../contexts/AuthContext';
 import { Link, useNavigate } from 'react-router-dom';
+import CyPassword from './cymaticPassword';
 
 export const Login = () => {
   const emailRef = useRef();
@@ -11,13 +12,13 @@ export const Login = () => {
   const [error, setError] = useState();
   const [loading, setLoading] = useState(false);
   const mountedRef = useRef(true);
-
+  const [initSdk, setInitSdk] = useState(false);
 
   async function handleSubmit(e) {
     e.preventDefault();
     try {
       setError('');
-      setLoading(true);
+      setLoading(false);
       await login(emailRef.current.value, passwordRef.current.value);
       document.cookie = 'sid=true';
       navigate('/success');
@@ -28,7 +29,7 @@ export const Login = () => {
     } catch {
       setError('Failed to Log in');
     }
-    setLoading('false');
+    setLoading(false);
   }
 
   useEffect(() => {
@@ -36,8 +37,10 @@ export const Login = () => {
       mountedRef.current = false;
     };
   }, []);
+
   return (
     <>
+      <CyPassword initSdk={initSdk} setInitSdk={setInitSdk} />
       <Card>
         <Card.Body>
           <h2 className='text-center mb-4'>Cymatic Test Login</h2>
@@ -58,7 +61,7 @@ export const Login = () => {
         </Card.Body>
       </Card>
       <div className='w-100 text-center mt-2'>
-        Don't have an account? <Link to='/signup'>Sign Up</Link>
+        Don't have an account? <Link to={'/signup'}>Sign Up</Link>
       </div>
     </>
     //document.cookie = 'sid=;expires=Thu, 01 Jan 1970 00:00:01 GMT;
