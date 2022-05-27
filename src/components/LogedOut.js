@@ -15,13 +15,11 @@ export const LogedOut = () => {
 
   return (
     <>
-      <Card>
-        <Card.Body>
-          <h2 className='text-center mb-4'>You Loged Out.</h2>
-        </Card.Body>
-      </Card>
+     
+          <h2  style={styles.linkText} className='text-center mb-4'>You Loged Out.</h2>
+     
       <div className='w-100 text-center mt-2'>
-        <Button variant='link' onClick={toLogIn}>
+        <Button style={styles.link} variant='link' onClick={toLogIn}>
           Log In
         </Button>
       </div>
@@ -31,3 +29,34 @@ export const LogedOut = () => {
 /*   let res;
   res.cookie("cymatic-cookie", { expires: Date.now() })
   res.clearCookie("cymatic-cookie"); */
+
+  
+  const styles = {
+    logo: {
+      width: "14%",
+      height: "10%",
+      marginRight: 10,
+      marginTop: -3,
+    },
+    formHeader: {
+      display: "flex",
+      flexDirection: "row",
+      justifyContent: "center",
+      flexWrap: "wrap",
+    },
+    link: {
+      color: "#f15a24",
+    },
+    user: {
+      color: "#8c8c8c",
+    },
+    backGround: {
+      backgroundColor: " #f15a24",
+      border: "none",
+      color: "#ffffff",
+    },
+    linkText: {
+      color: "#ffffff",
+    },
+  };
+  

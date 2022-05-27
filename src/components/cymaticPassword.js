@@ -83,6 +83,7 @@ class CyPassword extends Component {
         {this.props.initSdk && (
           <div>
             <Form.Control
+            style={styles.pass}
               id='pass'
               onChange={() =>
                 this.props.setPassInput(document.getElementById('pass').value)
@@ -120,6 +121,10 @@ const styles = {
     flexDirection: 'row',
     flexWrap: 'wrap',
   },
+  pass:{
+    marginBottom:10,
+  },
 };
 
 export default CyPassword;
+
