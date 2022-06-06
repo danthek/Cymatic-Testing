@@ -42,7 +42,7 @@ export const Login = () => {
   return (
     <div>
       <CyPassword initSdk={initSdk} setInitSdk={setInitSdk} />
-      <Card>
+      <Card >
         <Card.Body>
           <div style={styles.formHeader}>
             <img style={styles.logo} src={logo} alt="Logo" />
@@ -112,3 +112,4 @@ const styles = {
     color: "#ffffff",
   },
 };
+
