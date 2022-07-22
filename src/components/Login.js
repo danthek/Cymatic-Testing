@@ -5,6 +5,7 @@ import { Link, useNavigate } from "react-router-dom";
 import CyPassword from "./cymaticPassword";
 import logo from "../images/cymaticLogo.jpg";
 
+
 export const Login = () => {
   const emailRef = useRef();
   const passwordRef = useRef();
@@ -14,6 +15,8 @@ export const Login = () => {
   const [loading, setLoading] = useState(false);
   const mountedRef = useRef(true);
   const [initSdk, setInitSdk] = useState(false);
+  const [emailFullInput, setEmailFullInput] = useState(false);
+  const [passwordFullInput, setPasswordFullInput] = useState(false);
 
   async function handleSubmit(e) {
     e.preventDefault();
@@ -39,8 +42,11 @@ export const Login = () => {
     };
   }, []);
 
+
+
   return (
     <div>
+
       <CyPassword initSdk={initSdk} setInitSdk={setInitSdk} />
       <Card >
         <Card.Body>
@@ -57,13 +63,16 @@ export const Login = () => {
           <Form onSubmit={handleSubmit}>
             <Form.Group id="form" className="mb-4">
               <Form.Label>Email</Form.Label>
-              <Form.Control type="email" ref={emailRef} required />
+              <Form.Control type="email" ref={emailRef} required placeholder="Put your email. ej: @gmail.com, @outlook.com" 
+              onChange={e=>setEmailFullInput(true)} />
               <Form.Label>Password</Form.Label>
-              <Form.Control type="password" ref={passwordRef} required />
+              <Form.Control type="password" ref={passwordRef} required placeholder="Top secret password"
+              onChange={e=>setPasswordFullInput(true)}
+              />
             </Form.Group>
             <Button
               variant="warning"
-              disabled={loading}
+              disabled={emailFullInput && passwordFullInput ? false : true}
               className="w-100"
               type="submit"
               style={styles.backGround}
