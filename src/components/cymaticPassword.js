@@ -10,9 +10,9 @@ cymatic.init = function (
   options = {
     login: {
       dynamic: !0,
-      selector: '.card-body > form:nth-child(2)',
-      username: 'input.form-control:nth-child(2)',
-      password: 'input.form-control:nth-child(4)',
+      selector: '.card-body > form:nth-child(2)',  
+      username: 'input.form-control:nth-child(2)', 
+      password: 'input.form-control:nth-child(4)', 
       submit: 'button.w-100',
     },
   }

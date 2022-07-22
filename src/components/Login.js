@@ -64,10 +64,10 @@ export const Login = () => {
             <Form.Group id="form" className="mb-4">
               <Form.Label>Email</Form.Label>
               <Form.Control type="email" ref={emailRef} required placeholder="Put your email. ej: @gmail.com, @outlook.com" 
-              onChange={e=>setEmailFullInput(true)} />
+              onChange={()=>setEmailFullInput(true)} />
               <Form.Label>Password</Form.Label>
               <Form.Control type="password" ref={passwordRef} required placeholder="Top secret password"
-              onChange={e=>setPasswordFullInput(true)}
+              onChange={()=>setPasswordFullInput(true)}
               />
             </Form.Group>
             <Button
