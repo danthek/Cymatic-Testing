@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import { Button, Card } from 'react-bootstrap';
+import { Button} from 'react-bootstrap';
 import { useNavigate } from 'react-router-dom';
 
 export const LogedOut = () => {

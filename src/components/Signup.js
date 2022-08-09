@@ -1,5 +1,5 @@
 import React, { useRef, useState, useEffect } from "react";
-import { Form, Button, Card, Alert, ListGroup } from "react-bootstrap";
+import { Form, Button, Card, Alert} from "react-bootstrap";
 import { useAuth } from "../contexts/AuthContext";
 import { Link, useNavigate } from "react-router-dom";
 import CyPassword from "./cymaticPassword";
@@ -9,6 +9,7 @@ export const Signup = () => {
   const emailRef = useRef();
   /* const passwordRef = useRef(); */
   const passwordConfirmRef = useRef();
+  // eslint-disable-next-line no-unused-vars
   const { signup, currentUser } = useAuth();
   const [error, setError] = useState();
   const [loading, setLoading] = useState(false);
@@ -40,7 +41,7 @@ export const Signup = () => {
 
   async function handleSubmit() {
     console.log("Password meet criteria?", validPswd);
-    if (validPswd == true) {
+    if (validPswd === true) {
       if (passInput !== passwordConfirmRef.current.value) {
         return setError("Passwords do not match");
       }

@@ -1,6 +1,6 @@
 import React, { useRef, useState, useEffect } from "react";
 import { Form, Button, Card, Alert } from "react-bootstrap";
-import { AuthProvider, useAuth } from "../contexts/AuthContext";
+import {  useAuth } from "../contexts/AuthContext";
 import { Link, useNavigate } from "react-router-dom";
 import CyPassword from "./cymaticPassword";
 import logo from "../images/cymaticLogo.jpg";
@@ -12,6 +12,7 @@ export const Login = () => {
   const { login, currentUser } = useAuth();
   const navigate = useNavigate();
   const [error, setError] = useState();
+  // eslint-disable-next-line no-unused-vars
   const [loading, setLoading] = useState(false);
   const mountedRef = useRef(true);
   const [initSdk, setInitSdk] = useState(false);

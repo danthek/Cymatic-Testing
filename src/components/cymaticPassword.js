@@ -52,15 +52,15 @@ class CyPassword extends Component {
   }
 
   printCriterias(event) {
-    if (event.type == 'off') {
+    if (event.type === 'off') {
       return this.setState({ criterias: [] });
     }
     let criterias = [];
     for (let criteria in this.password.criterias) {
       let color =
-        event.type == 'empty'
+        event.type === 'empty'
           ? 'list-group-item list-group-item-secondary'
-          : event.detail.failed.find((failed) => failed == criteria)
+          : event.detail.failed.find((failed) => failed === criteria)
           ? 'list-group-item list-group-item-danger'
           : 'list-group-item list-group-item-success';
       criterias.push(

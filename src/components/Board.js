@@ -1,27 +1,23 @@
 import React from "react";
-import { Button, Card, Container } from "react-bootstrap";
+import { Button,  Container } from "react-bootstrap";
 import { useAuth } from "../contexts/AuthContext";
-import { Link, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 export const Board = () => {
   const { logout, currentUser } = useAuth();
   const navigate = useNavigate();
-
+/* 
   async function toLogIn() {
     return navigate("/login");
-  }
+  } */
 
   function handleLogOut() {
+    // eslint-disable-next-line no-sequences
     return logout(),
     navigate("/logedout");
   }
 
-  /*   function handleLogOut() {
-    return (
-      logout(),
-      navigate('/logedout'),
-    )
-  } */
+ 
   return (
     <>
      
